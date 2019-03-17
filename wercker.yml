@@ -37,10 +37,8 @@ build:
 # Deploy to heroku
 deploy:
   steps:
-    - add-ssh-key:
-        keyname: HEROKU_KEY_PAIR
     - heroku-deploy:
+        key-name: HEROKU_KEY_PAIR
         key: $HEROKU_KEY
-        #key-pair: HEROKU_KEY_PAIR
         user: $HEROKU_USER
         app-name: $HEROKU_APP_NAME
